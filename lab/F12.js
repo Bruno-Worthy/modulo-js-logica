@@ -1,13 +1,17 @@
 
 const jogador = {
-  nome: "Bruno",
-  classe: "Guerreiro",
-  nivel: 5,
-  vida: 100
+    nome: "Lia",
+    pontos: 340,
+    nivel: 3
 };
 
-console.log("=== FICHA DO JOGADOR ===");
-console.log("Nome:", jogador.nome);
-console.log("Classe:", jogador.classe);
-console.log("Nível:", jogador.nivel);
-console.log("Vida:", jogador.vida);
+const proximoNivel = jogador.nivel + 1;
+const pontosNecessarios = proximoNivel * 100;
+const pontosFaltantes = pontosNecessarios - jogador.pontos;
+
+console.log("Jogador: " + jogador.nome);
+console.log("Nível: " + jogador.nivel);
+console.log(
+    "Faltam " + pontosFaltantes +
+    " pontos para o nível " + proximoNivel
+);
